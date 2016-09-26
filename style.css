@@ -1,4 +1,33 @@
-section {
-  display: inline-block;
-  margin: 10px;
+body {
+  background-color: salmon;
+}
+
+article {
+  background-color: white;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  outline: 8px solid salmon;
+  padding: 2%;
+
+}
+
+h1 {
+  color: salmon;
+}
+
+div {
+  background-color: white;
+  width: 56%;
+  height: 150%;
+  margin-top: 5%;
+  margin-left: 22%;
+  margin-right: 22%;
+  margin-bottom: 5%;
+}
+
+aside {
+  text-align: center;
 }
