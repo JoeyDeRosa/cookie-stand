@@ -1,4 +1,5 @@
 'use strict';
+var form = document.getElementById('form');
 
 function CookieShop(name, min, max, cpc) {
   this.shopName = name;
@@ -74,8 +75,28 @@ function createTableFooter(shopArray) {
   table.appendChild(tfoot);
 }
 
-createTableHeader(shopArray[0]);
-for(var i = 0; i < shopArray.length; i++) {
-  shopArray[i].render();
+function renderAll() {
+  createTableHeader(shopArray[0]);
+  for(var i = 0; i < shopArray.length; i++) {
+    shopArray[i].render();
+  }
+  createTableFooter(shopArray);
 }
-createTableFooter(shopArray);
+
+function handleSubmit(event) {
+  event.preventDefault();
+  if (!event.target.newLocation.value || !event.target.minCustomers.value || !event.target.maxCustomers.value || !event.target.cookiesPerCustomer.value) {
+    return alert('Fields cannot be empty!');
+  }
+  var inputLocation = event.target.newLocation.value;
+  var inputMin = event.target.minCustomers.value;
+  var inputMax = event.target.maxCustomers.value;
+  var inputAvg = event.target.cookiesPerCustomer.value;
+  new CookieShop(inputLocation, inputMin, inputMax, inputAvg);
+  renderAll();
+  event.target.newLocation.value = null;
+  event.target.minCustomers.value = null;
+  event.target.maxCustomers.value = null;
+  event.target.cookiesPerCustomer.value = null;
+}
+form.addEventListener('submit', handleSubmit);
