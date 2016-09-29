@@ -1,4 +1,7 @@
 'use strict';
+var table = document.getElementById('table');
+var form = document.getElementById('form');
+var shopArray = [];
 
 function CookieShop(name, min, max, cpc) {
   this.shopName = name;
@@ -20,7 +23,6 @@ function CookieShop(name, min, max, cpc) {
         totalCookies += this.cookiesPerHour[i];
       }
     }
-    var table = document.getElementById('table');
     var trEl = document.createElement('tr');
     var tdEl = document.createElement('td');
     tdEl.textContent = this.shopName;
@@ -34,7 +36,6 @@ function CookieShop(name, min, max, cpc) {
   };
   shopArray.push(this);
 }
-var shopArray = [];
 new CookieShop('1st and Pike', 23, 65, 6.3);
 new CookieShop('SeaTac Airport', 3, 24, 1.2);
 new CookieShop('Seattle Center', 11, 38, 3.7);
@@ -42,7 +43,6 @@ new CookieShop('Capitol Hill', 20, 38, 2.3);
 new CookieShop('Alki', 2, 16, 4.6);
 
 function createTableHeader(shopArray) {
-  var table = document.getElementById('table');
   var thead = document.createElement('thead');
   var trEl = document.createElement('tr');
   for(var i = 0; i < shopArray.times.length; i++) {
@@ -55,7 +55,6 @@ function createTableHeader(shopArray) {
 }
 
 function createTableFooter(shopArray) {
-  var table = document.getElementById('table');
   var tfoot = document.createElement('tfoot');
   var trEl = document.createElement('tr');
   var tdEl = document.createElement('td');
@@ -73,6 +72,30 @@ function createTableFooter(shopArray) {
   tfoot.appendChild(trEl);
   table.appendChild(tfoot);
 }
+
+function addNewRow(newRow) {
+  table.deleteRow(table.rows.length - 1); //thanks Marc
+  newRow.render();
+  createTableFooter(shopArray);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  if (!event.target.newLocation.value || !event.target.minCustomers.value || !event.target.maxCustomers.value || !event.target.cookiesPerCustomer.value) {
+    return alert('Fields cannot be empty!');
+  }
+  var inputLocation = event.target.newLocation.value;
+  var inputMin = parseInt(event.target.minCustomers.value);
+  var inputMax = parseInt(event.target.maxCustomers.value);
+  var inputAvg = parseFloat(event.target.cookiesPerCustomer.value);
+  var newRow = new CookieShop(inputLocation, inputMin, inputMax, inputAvg);
+  addNewRow(newRow);
+  event.target.newLocation.value = null;
+  event.target.minCustomers.value = null;
+  event.target.maxCustomers.value = null;
+  event.target.cookiesPerCustomer.value = null;
+}
+form.addEventListener('submit', handleSubmit);
 
 createTableHeader(shopArray[0]);
 for(var i = 0; i < shopArray.length; i++) {

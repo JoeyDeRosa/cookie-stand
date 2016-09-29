@@ -1,3 +1,32 @@
 table, tr, td {
-  border: 1px solid black;
+  border: 1px solid salmon;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+body {
+  background-color: salmon;
+}
+
+form {
+  margin: auto;
+}
+
+div {
+  margin: auto;
+  background-color: white;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+header {
+  text-align: center;
+  color: white
+  
+}
+
+fieldset {
+  border-color: white;
+  background-color: salmon;
 }
