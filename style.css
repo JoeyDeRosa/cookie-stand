@@ -4,30 +4,198 @@ body {
 
 article {
   background-color: white;
-  width: 50%;
+  width: 55%;
+  height: 350px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 5%;
   margin-bottom: 5%;
-  outline: 8px solid salmon;
-  padding: 2%;
+  text-align: center;
+}
 
+section {
+  width: 100%;
+  height: 100%;
+}
+
+aside {
+  width: 90%;
+  height: 100%;
+}
+
+#contact {
+  margin-top: 20%;
+}
+
+#aboutUs {
+  background-image: url("chinook.jpg");
+  padding: 2%;
+  visibility: visible;
+}
+
+#aboutUs aside {
+  visibility: hidden;
+}
+
+#aboutUs:hover {
+  background-image: none;
+  visibility: hidden;
+}
+
+#aboutUs:hover aside {
+  visibility: visible;
+}
+
+#salmonCookies {
+  background-image: url("frosted-cookie.jpg");
+  padding: 2%;
+  visibility: visible;
+}
+
+#salmonCookies aside {
+  visibility: hidden;
+}
+
+#salmonCookies:hover {
+  background-image: none;
+  visibility: hidden;
+}
+
+#salmonCookies:hover aside {
+  visibility: visible;
+}
+
+#locations {
+  background-image: url("fish.jpg");
+  padding: 2%;
+  visibility: visible;
+}
+
+#locations aside {
+  visibility: hidden;
+}
+
+#locations:hover {
+  background-image: none;
+  visibility: hidden;
+}
+
+#locations:hover aside {
+  visibility: visible;
+}
+
+#family {
+  background-image: url("family.jpg");
+  padding: 2%;
+  visibility: visible;
+}
+
+#family aside {
+  visibility: hidden;
+}
+
+#family:hover {
+  background-image: none;
+  visibility: hidden;
+}
+
+#family:hover aside {
+  visibility: visible;
+}
+
+#buyCookies {
+  background-image: url("cutter.jpeg");
+  padding: 2%;
+  visibility: visible;
+}
+
+#buyCookies aside {
+  visibility: hidden;
+}
+
+#buyCookies:hover {
+  background-image: none;
+  visibility: hidden;
+}
+
+#buyCookies:hover aside {
+  visibility: visible;
+}
+
+#buyShirt {
+  background-image: url("shirt.jpg");
+  padding: 2%;
+  visibility: visible;
+}
+
+#buyShirt aside {
+  visibility: hidden;
+}
+
+#buyShirt:hover {
+  background-image: none;
+  visibility: hidden;
+}
+
+#buyShirt:hover aside {
+  visibility: visible;
 }
 
 h1 {
   color: salmon;
+  margin-right: 2%;
+}
+
+h2 {
+  color: salmon;
+}
+
+header {
+  text-align: right;
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  border-top: solid 10px salmon;
+  border-bottom: solid 10px salmon;
+  padding-top: 1%;
+  padding-bottom: 0%;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 div {
-  background-color: white;
-  width: 56%;
-  height: 150%;
-  margin-top: 5%;
+  margin-top: 25%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 5%;
 }
 
-header {
-  text-align: center;
+a {
+  color: white;
+  background-color: salmon;
+  margin-left: 2%;
+  margin-right: 2%;
+  display: inline-block;
+  border-radius: 25px;
+  padding: 1%;
+}
+
+a:hover {
+  color: salmon;
+  background: white;
+}
+
+nav {
+  text-align: right;
+}
+
+img {
+  height: 123px;
+  width: 394px;
+  float: left;
+}
+
+ul {
+  display: inline-block;
 }
