@@ -5,29 +5,118 @@ body {
 article {
   background-color: white;
   width: 50%;
+  height: 300px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 5%;
   margin-bottom: 5%;
-  outline: 8px solid salmon;
-  padding: 2%;
+  text-align: center;
+}
 
+#aboutUs {
+  background-image: url("chinook.jpg");
+  height: 300px;
+  padding: 2%;
+  visibility: visible;
+}
+
+#aboutUs aside {
+  visibility: hidden;
+}
+
+#aboutUs:hover {
+  background-image: none;
+  visibility: hidden;
+}
+
+#aboutUs:hover aside {
+  visibility: visible;
+}
+
+#locations {
+  background-image: url("fish.jpg");
+  height: 300px;
+  visibility: visible;
+}
+
+#locations aside {
+  visibility: hidden;
+}
+
+#locations:hover {
+  background-image: none;
+  visibility: hidden;
+}
+
+#locations:hover aside {
+  visibility: visible;
+}
+
+#family {
+  background-image: url("family.jpg");
+  visibility: visible;
+  height: 300px;
+}
+
+#family aside {
+  visibility: hidden;
+}
+
+#family:hover {
+  background-image: none;
+  visibility: hidden;
+}
+
+#family:hover aside {
+  visibility: visible;
 }
 
 h1 {
   color: salmon;
 }
 
-div {
+header {
+  text-align: right;
   background-color: white;
-  width: 56%;
-  height: 150%;
-  margin-top: 5%;
+  position: fixed;
+  width: 100%;
+  border-top: solid 10px salmon;
+  border-bottom: solid 10px salmon;
+  padding-top: 1%;
+  padding-bottom: 0%;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+div {
+  margin-top: 25%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 5%;
 }
 
-header {
-  text-align: center;
+h2 {
+  color: white;
+  background-color: salmon;
+  margin-left: 2%;
+  margin-right: 2%;
+  display: inline-block;
+  border-radius: 25px;
+  padding: 1%;
+}
+
+h2:hover {
+  color: salmon;
+  background: white;
+}
+
+nav {
+  text-align: right;
+}
+
+img {
+  height: 123px;
+  width: 394px;
+  margin-right: 5%;
 }
